@@ -1692,6 +1692,13 @@ kubeStateMetrics:
 ##
 kube-state-metrics:
   namespaceOverride: ""
+  image:
+    registry: registry.k8s.io
+    repository: kube-state-metrics/kube-state-metrics
+    # If unset use v + .Charts.appVersion
+    tag: ""
+    sha: ""
+    pullPolicy: IfNotPresent
   rbac:
     create: true
   releaseLabel: true
